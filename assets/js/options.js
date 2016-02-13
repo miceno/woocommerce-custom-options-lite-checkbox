@@ -1,6 +1,6 @@
 jQuery( document ).ready( function($) {
 	
-	$(this).on( 'change', '.custom_field, .custom_textarea, input.qty', function() {
+	$(this).on( 'change', '.custom_field, .custom_textarea, .custom_checkbox, input.qty', function() {
 		
 		$(this).trigger( 'show_options_final_total' );
 		
@@ -57,7 +57,9 @@ jQuery( document ).ready( function($) {
 			
 			option_price = $(this).attr('data-price');
 			
-			var value_entered =  $(this).val();
+			// Only get value if checkbox is on
+			var value_entered = $(this).attr('type') == "checkbox" ? 
+				!!$(this).attr('checked') : $(this).val();
 			
 			if(value_entered != '' || option_price == 0)
 			{
@@ -70,7 +72,7 @@ jQuery( document ).ready( function($) {
 		
 		var qty = $('.qty').val();
 		
-		if ( option_total > 0 && qty > 0 ) {
+		if ( option_total != 0 && qty > 0 ) {
 			
 			option_total = option_total * qty;
 			
