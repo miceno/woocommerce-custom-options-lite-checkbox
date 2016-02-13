@@ -11,6 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<select name="product_option_type[<?php echo $loop; ?>]" class="product_option_type">
 			<option <?php selected('custom_field', $option['type']); ?> value="custom_field"><?php _e('Custom input (text field)', 'custom-options'); ?></option>
 			<option <?php selected('custom_textarea', $option['type']); ?> value="custom_textarea"><?php _e('Custom input (text area)', 'custom-options'); ?></option>
+			<option <?php selected('custom_checkbox', $option['type']); ?> value="custom_checkbox"><?php _e('Custom checkbox', 'custom-options'); ?></option>
 		</select>
 		<input type="hidden" name="product_option_position[<?php echo $loop; ?>]" class="product_option_position" value="<?php echo $loop; ?>" />
 	</h3>

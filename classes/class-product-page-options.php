@@ -62,6 +62,13 @@ class product_page_options_class {
 					woocommerce_get_template( 'custom_textareas.php', array( 'options' => $options ), 'custom-options', plugin_dir_path( dirname( __FILE__ ) )  . '/templates/' );
 				
 				}
+				elseif( $options['type'] === 'custom_checkbox' )
+				{
+					
+					woocommerce_get_template( 'custom_checkbox.php', array( 'options' => $options ), 'custom-options', plugin_dir_path( dirname( __FILE__ ) )  . '/templates/' );
+				
+				}
+					
 			
 			}
 			

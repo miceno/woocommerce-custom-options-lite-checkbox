@@ -11,3 +11,7 @@ at https://www.phoeniixx.com/product/woocommerce-product-custom-options/
 ## version 0.2.0
 
 * Allow negative price of options
+
+## version 0.3.0
+
+* Add checkbox input option type

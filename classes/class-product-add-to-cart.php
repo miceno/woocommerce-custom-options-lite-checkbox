@@ -360,13 +360,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 							}
 							
 						}
-						if ( strlen( $post_data ) > $options['max']) {
+						if( $options['type'] != "custom_checkbox"){
+							if ( strlen( $post_data ) > $options['max']) {
 							
-							$data = new WP_Error( 'error', sprintf( __( 'The maximum allowed length for "%s" is %s letters.', 'custom-options' ), $options['label'], $options['max'] ) );
+								$data = new WP_Error( 'error', sprintf( __( 'The maximum allowed length for "%s" is %s letters.', 'custom-options' ), $options['label'], $options['max'] ) );
 							
-							wc_add_notice( $data->get_error_message(), 'error' );
+								wc_add_notice( $data->get_error_message(), 'error' );
 							
-							$data_msg = 1;
+								$data_msg = 1;
+							}
 						}
 						
 				}
