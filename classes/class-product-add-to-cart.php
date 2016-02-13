@@ -388,7 +388,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 									
 					$name = $options['name'];
 
-					if ( $options['price'] > 0 ) {
+					// if ( $options['price'] > 0 ) 
+					{
 						
 						$name .= ' (' . woocommerce_price( get_product_addition_options_price ( $options['price'] ) ) . ')';
 					
@@ -413,7 +414,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				foreach ( $cart_item_data['options'] as $options ) {
 					
-					if ( $options['price'] > 0 ) {
+					// if ( $options['price'] > 0 ) 
+					{
 						
 						$extra_cost += $options['price'];
 						
@@ -449,7 +451,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 					$name = $options['name'];
 
-					if ( $options['price'] > 0 ) {
+					// if ( $options['price'] > 0 ) 
+					{
 						
 						$name .= ' (' . woocommerce_price( get_product_addition_options_price( $options['price'] ) ) . ')';
 					}

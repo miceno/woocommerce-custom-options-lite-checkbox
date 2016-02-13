@@ -7,3 +7,7 @@ at https://www.phoeniixx.com/product/woocommerce-product-custom-options/
 ## version 0.1.0
  
 * Initial version
+
+## version 0.2.0
+
+* Allow negative price of options

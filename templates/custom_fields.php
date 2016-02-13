@@ -3,7 +3,7 @@ $required = $options['required'];
 
 if($options['price'] != 0)
 {
-	$price = ':- ('.woocommerce_price( $options['price'] ).')';
+	$price = ': ('.woocommerce_price( $options['price'] ).')';
 }
 else
 {

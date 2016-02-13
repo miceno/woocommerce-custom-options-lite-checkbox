@@ -22,7 +22,7 @@ jQuery( document ).ready( function($) {
 		 		product_price = $( variation.price_html ).find('.amount:last').text();
 				product_price = product_price.replace( woocommerce_custom_options_params.thousand_separator, '' );
 				product_price = product_price.replace( woocommerce_custom_options_params.decimal_separator, '.' );
-				product_price = product_price.replace(/[^0-9\.]/g, '');
+				product_price = product_price.replace(/[^0-9\-\.]/g, '');
 				product_price = parseFloat( product_price );
 
 				$totals.data( 'product-price', product_price );
